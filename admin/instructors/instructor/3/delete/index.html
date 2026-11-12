@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+<title>SpanSet TMS Admin</title>
+<link rel="stylesheet" href="../../../../../static/admin/css/base.css">
+
+  <link rel="stylesheet" href="../../../../../static/admin/css/dark_mode.css">
+  <script src="../../../../../static/admin/js/theme.js"></script>
+
+
+  <link rel="stylesheet" href="../../../../../static/admin/css/nav_sidebar.css">
+  <script src="../../../../../static/admin/js/nav_sidebar.js" defer></script>
+
+
+
+<link rel="stylesheet" href="../../../../../static/css/admin.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet">
+
+
+
+    
+    <script src="../../../../../static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="../../../../../static/admin/js/jquery.init.js"></script>
+<script src="../../../../../static/admin/js/core.js"></script>
+<script src="../../../../../static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="../../../../../static/admin/js/actions.js"></script>
+<script src="../../../../../static/admin/js/urlify.js"></script>
+<script src="../../../../../static/admin/js/prepopulate.js"></script>
+<script src="../../../../../static/admin/js/vendor/xregexp/xregexp.js"></script>
+    <script src="../../../../../static/admin/js/cancel.js" async></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../../static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<div style="position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#004B73;
+color:#fff;font:500 12px/1.5 'Roboto Condensed',Arial,sans-serif;padding:6px 14px;letter-spacing:.04em">
+STATIC SNAPSHOT &mdash; read-only GitHub Pages demo of the SpanSet TMS prototype. Forms, search and
+actions are disabled. Run it locally for the interactive version.</div>
+<body class=" app-instructors model-instructor delete-confirmation"
+  data-admin-utc-offset="3600">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="branding" style="display:flex;align-items:center;gap:12px;">
+  <div class="ss-logo-mark">
+    <svg xmlns="http://www.w3.org/2000/svg" width="252" height="31" viewBox="0 0 252 31" fill="none">
+  <path d="M 116.187 8.664 L 128.856 8.665 C 130.307 8.671 131.397 8.732 132.533 9.314 C 134.998 10.565 135.961 13.197 135.961 15.45 C 135.961 17.709 134.998 20.344 132.533 21.593 C 131.222 22.26 129.973 22.241 128.159 22.241 L 121.642 22.24 L 121.642 31 L 116.187 31 L 116.187 8.664 Z M 225.027 8.077 C 226.096 8.08 227.033 8.097 227.854 8.183 C 229.501 8.35 233.885 9.174 233.885 15.171 C 233.885 15.701 233.861 16.19 233.816 16.643 L 219.936 16.643 C 219.936 17.29 220.217 18.082 220.909 18.405 C 221.374 18.621 222.642 18.621 225.044 18.621 C 226.859 18.621 229.079 18.56 230.65 18.549 C 231.722 18.542 232.759 18.542 233.451 18.542 C 232.347 22.13 229.404 22.089 227.868 22.194 C 226.938 22.255 225.849 22.263 224.604 22.264 L 223.113 22.263 C 222.048 22.26 221.121 22.244 220.3 22.161 C 218.654 21.992 214.271 21.17 214.271 15.171 C 214.271 9.175 218.654 8.35 220.3 8.183 C 221.121 8.097 222.059 8.08 223.129 8.077 L 225.027 8.077 Z M 88.234 0.104 L 115.097 0.106 L 115.097 5.014 L 88.44 5.015 C 87.952 5.015 87.379 5.047 87.066 5.215 C 86.358 5.595 86.23 6.232 86.23 6.838 C 86.23 7.445 86.358 8.08 87.066 8.462 C 87.379 8.627 87.952 8.664 88.44 8.664 L 107.295 8.664 C 109.11 8.664 110.356 8.643 111.669 9.315 C 114.133 10.566 115.097 13.196 115.097 15.45 C 115.097 17.709 114.133 20.344 111.669 21.593 C 110.356 22.26 109.11 22.241 107.295 22.241 L 80.435 22.24 L 80.435 17.248 L 107.093 17.248 C 107.58 17.248 108.155 17.215 108.467 17.048 C 109.175 16.67 109.301 16.031 109.301 15.423 C 109.301 14.819 109.175 14.18 108.467 13.803 C 108.155 13.633 107.58 13.602 107.093 13.602 L 88.234 13.602 C 86.421 13.602 85.175 13.62 83.862 12.954 C 81.398 11.701 80.435 9.07 80.435 6.81 C 80.435 4.554 81.398 2.002 83.862 0.753 C 85.175 0.085 86.421 0.104 88.234 0.104 Z M 156.585 8.664 L 156.585 22.24 L 144.614 22.241 L 143.917 22.241 C 142.467 22.234 141.378 22.171 140.239 21.593 C 137.776 20.344 136.814 17.709 136.814 15.45 C 136.814 13.197 137.776 10.565 140.239 9.314 C 141.378 8.732 142.467 8.671 143.917 8.665 L 156.585 8.664 Z M 186.472 0.104 L 213.504 0.106 L 213.504 5.014 L 186.676 5.015 C 186.189 5.015 185.616 5.047 185.304 5.215 C 184.594 5.595 184.466 6.232 184.466 6.838 C 184.466 7.445 184.594 8.08 185.304 8.462 C 185.616 8.627 186.189 8.664 186.676 8.664 L 205.704 8.664 C 207.516 8.664 208.762 8.643 210.078 9.315 C 212.54 10.566 213.504 13.196 213.504 15.45 C 213.504 17.709 212.54 20.344 210.078 21.593 C 208.762 22.26 207.516 22.241 205.704 22.241 L 178.807 22.24 L 178.807 17.248 L 205.501 17.248 C 205.987 17.248 206.561 17.215 206.874 17.048 C 207.582 16.67 207.71 16.031 207.71 15.423 C 207.71 14.819 207.582 14.18 206.874 13.803 C 206.561 13.633 205.987 13.602 205.501 13.602 L 186.472 13.602 C 184.659 13.602 183.411 13.62 182.098 12.954 C 179.635 11.701 178.671 9.07 178.671 6.81 C 178.671 4.554 179.635 2.002 182.098 0.753 C 183.411 0.085 184.659 0.104 186.472 0.104 Z M 174.289 9.314 C 176.753 10.565 177.384 13.026 177.54 13.813 C 177.689 14.564 177.716 15.461 177.716 16.27 L 177.716 22.24 L 172.149 22.24 L 172.149 15.63 C 172.148 14.9 172.094 14.246 171.313 13.801 C 171.006 13.626 170.427 13.602 169.938 13.602 L 163.76 13.602 L 163.76 22.24 L 158.307 22.24 L 158.307 8.664 L 169.916 8.664 C 171.73 8.664 172.976 8.643 174.289 9.314 Z M 240.448 1.074 L 240.448 8.777 L 251.125 8.777 L 251.125 13.602 L 240.448 13.602 L 240.448 14.901 C 240.448 15.758 240.392 16.539 241.284 17.048 C 241.59 17.224 242.17 17.248 242.656 17.248 L 251.125 17.248 L 251.125 22.24 L 242.079 22.24 C 240.556 22.233 239.194 22.171 238.054 21.592 C 235.593 20.342 235.326 18.036 235.17 17.25 C 235.019 16.499 234.993 15.441 234.993 14.633 L 234.993 1.074 L 240.448 1.074 Z M 26.625 17.317 L 26.625 22.133 L 0 22.133 L 0 17.317 L 26.625 17.317 Z M 64.788 17.315 L 64.788 22.133 L 38.163 22.133 L 38.163 17.315 L 64.788 17.315 Z M 127.954 13.602 L 121.642 13.602 L 121.642 17.248 L 127.954 17.248 C 128.443 17.248 129.016 17.215 129.329 17.047 C 130.038 16.669 130.166 16.031 130.166 15.423 C 130.166 14.819 130.038 14.18 129.329 13.801 C 129.016 13.634 128.443 13.602 127.954 13.602 Z M 151.131 13.602 L 144.819 13.602 C 144.33 13.602 143.757 13.634 143.443 13.801 C 142.736 14.18 142.609 14.819 142.609 15.423 C 142.609 16.031 142.736 16.669 143.443 17.047 C 143.757 17.215 144.33 17.248 144.819 17.248 L 151.131 17.248 L 151.131 13.602 Z M 224.528 11.654 L 223.924 11.654 C 223.226 11.655 222.402 11.662 222.402 11.662 C 221.824 11.662 221.133 11.702 220.819 11.871 C 220.112 12.25 219.887 13.021 219.887 13.626 L 228.537 13.626 C 228.537 13.021 228.311 12.25 227.603 11.871 C 227.291 11.702 226.599 11.662 226.021 11.662 L 225.974 11.662 C 225.791 11.66 225.119 11.655 224.528 11.654 Z M 248.348 0 C 250.371 0 252 1.547 252 3.446 C 252 5.366 250.371 6.894 248.348 6.894 C 246.318 6.894 244.68 5.366 244.68 3.446 C 244.68 1.547 246.318 0 248.348 0 Z M 248.348 0.543 C 246.644 0.543 245.274 1.846 245.274 3.428 C 245.274 5.048 246.644 6.349 248.348 6.349 C 250.045 6.349 251.408 5.048 251.408 3.428 C 251.408 1.846 250.045 0.543 248.348 0.543 Z M 248.503 1.504 C 249.24 1.504 249.96 1.693 249.96 2.525 C 249.96 3.12 249.631 3.488 249.029 3.619 L 250.023 5.367 L 249.396 5.367 L 248.424 3.674 L 247.563 3.674 L 247.563 5.367 L 246.988 5.367 L 246.988 1.504 L 248.503 1.504 Z M 26.665 0.093 L 26.665 4.909 L 0.04 4.909 L 0.04 0.093 L 26.665 0.093 Z M 64.828 0.091 L 64.828 4.909 L 38.203 4.909 L 38.203 0.091 L 64.828 0.091 Z M 248.528 1.966 L 247.563 1.966 L 247.563 3.213 L 248.416 3.213 C 249.239 3.213 249.43 2.896 249.43 2.518 C 249.43 2.083 249.015 1.988 248.625 1.97 L 248.528 1.966 Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+  </div>
+  <div>
+    <h1><a href="../../../..">TMS</a></h1>
+    <span class="ss-brand-sub">Training Management System</span>
+  </div>
+</div>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+
+                
+                    <a href="../../../../..">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="#">Change password</a> /
+                
+                <form onsubmit="return false" id="logout-form" method="post" action="#">
+                    <input type="hidden" 
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="../../../..">Home</a>
+&rsaquo; <a href="../../..">Instructors</a>
+&rsaquo; <a href="../..">Instructors</a>
+&rsaquo; <a href="../change">Thomas Weber (SSDE)</a>
+&rsaquo; Delete
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-bookings module">
+      <table>
+        <caption>
+          <a href="../../../../bookings" class="section" title="Models in the Bookings application">Bookings</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-bookingdelegate">
+              <th scope="row" id="bookings-bookingdelegate">
+                
+                  <a href="../../../../bookings/bookingdelegate">Booking delegates</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../bookings/bookingdelegate/add" class="addlink" aria-describedby="bookings-bookingdelegate">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-booking">
+              <th scope="row" id="bookings-booking">
+                
+                  <a href="../../../../bookings/booking">Bookings</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../bookings/booking/add" class="addlink" aria-describedby="bookings-booking">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-courses module">
+      <table>
+        <caption>
+          <a href="../../../../courses" class="section" title="Models in the Courses application">Courses</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-coursecategory">
+              <th scope="row" id="courses-coursecategory">
+                
+                  <a href="../../../../courses/coursecategory">Course categories</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../courses/coursecategory/add" class="addlink" aria-describedby="courses-coursecategory">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-coursesession">
+              <th scope="row" id="courses-coursesession">
+                
+                  <a href="../../../../courses/coursesession">Course sessions</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../courses/coursesession/add" class="addlink" aria-describedby="courses-coursesession">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-course">
+              <th scope="row" id="courses-course">
+                
+                  <a href="../../../../courses/course">Courses</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../courses/course/add" class="addlink" aria-describedby="courses-course">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-location">
+              <th scope="row" id="courses-location">
+                
+                  <a href="../../../../courses/location">Locations</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../courses/location/add" class="addlink" aria-describedby="courses-location">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-region">
+              <th scope="row" id="courses-region">
+                
+                  <a href="../../../../courses/region">Regions</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../courses/region/add" class="addlink" aria-describedby="courses-region">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-delegates module">
+      <table>
+        <caption>
+          <a href="../../../../delegates" class="section" title="Models in the Delegates application">Delegates</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-certificate">
+              <th scope="row" id="delegates-certificate">
+                
+                  <a href="../../../../delegates/certificate">Certificates</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../delegates/certificate/add" class="addlink" aria-describedby="delegates-certificate">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-company">
+              <th scope="row" id="delegates-company">
+                
+                  <a href="../../../../delegates/company">Companies</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../delegates/company/add" class="addlink" aria-describedby="delegates-company">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-delegate">
+              <th scope="row" id="delegates-delegate">
+                
+                  <a href="../../../../delegates/delegate">Delegates</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../delegates/delegate/add" class="addlink" aria-describedby="delegates-delegate">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-inspections module">
+      <table>
+        <caption>
+          <a href="../../../../inspections" class="section" title="Models in the Inspections application">Inspections</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-inspection">
+              <th scope="row" id="inspections-inspection">
+                
+                  <a href="../../../../inspections/inspection">Inspections</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../inspections/inspection/add" class="addlink" aria-describedby="inspections-inspection">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-instructors module current-app">
+      <table>
+        <caption>
+          <a href="../../.." class="section" title="Models in the Instructors application">Instructors</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-instructorcertificate">
+              <th scope="row" id="instructors-instructorcertificate">
+                
+                  <a href="../../../instructorcertificate">Instructor certificates</a>
+                
+              </th>
+
+              
+                <td><a href="../../../instructorcertificate/add" class="addlink" aria-describedby="instructors-instructorcertificate">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-instructor current-model">
+              <th scope="row" id="instructors-instructor">
+                
+                  <a href="../.." aria-current="page">Instructors</a>
+                
+              </th>
+
+              
+                <td><a href="../../add" class="addlink" aria-describedby="instructors-instructor">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-invoicing module">
+      <table>
+        <caption>
+          <a href="../../../../invoicing" class="section" title="Models in the Invoicing application">Invoicing</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-invoice">
+              <th scope="row" id="invoicing-invoice">
+                
+                  <a href="../../../../invoicing/invoice">Invoices</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../invoicing/invoice/add" class="addlink" aria-describedby="invoicing-invoice">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-payment">
+              <th scope="row" id="invoicing-payment">
+                
+                  <a href="../../../../invoicing/payment">Payments</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../invoicing/payment/add" class="addlink" aria-describedby="invoicing-payment">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-paperwork module">
+      <table>
+        <caption>
+          <a href="../../../../paperwork" class="section" title="Models in the Paperwork application">Paperwork</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-generateddocument">
+              <th scope="row" id="paperwork-generateddocument">
+                
+                  <a href="../../../../paperwork/generateddocument">Generated documents</a>
+                
+              </th>
+
+              
+                <td><a href="../../../../paperwork/generateddocument/add" class="addlink" aria-describedby="paperwork-generateddocument">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <main id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Delete</h1>
+          
+          
+
+  
+    <p>Are you sure you want to delete the instructor “Thomas Weber (SSDE)”? All of the following related items will be deleted:</p>
+    
+<h2>Summary</h2>
+<ul>
+    
+    <li>Instructors: 1</li>
+    
+</ul>
+
+    <h2>Objects</h2>
+    <ul id="deleted-objects">	<li>Instructor: <a href="../change">Thomas Weber (SSDE)</a></li></ul>
+    <form onsubmit="return false" method="post"><input type="hidden" 
+    <div>
+    <input type="hidden" name="post" value="yes">
+    
+    
+    <input type="submit" value="Yes, I’m sure">
+    <a role="button" href="#" class="button cancel-link">No, take me back</a>
+    </div>
+    </form>
+  
+
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+      </main>
+    </div>
+    <footer id="footer"></footer>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+
+</body>
+</html>
